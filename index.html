@@ -1,3 +1,25 @@
-<!-- FLAG{view_source_basic} -->
-<h1>CTF Level 1</h1>
-<a href="l2.html">Next</a>
+<!DOCTYPE html>
+<html>
+<body>
+<h2>CTF Level 1</h2>
+<p>Find the flag</p>
+
+<input id="flag" placeholder="FLAG{...}">
+<button onclick="check()">Submit</button>
+
+<p id="msg"></p>
+
+<a id="next" href="l2.html" style="display:none;">Next Level</a>
+
+<script>
+function check(){
+  if(flag.value === "FLAG{view_source_basic}"){
+    msg.innerText = "Correct!";
+    document.getElementById("next").style.display = "inline";
+  } else {
+    msg.innerText = "Wrong flag";
+  }
+}
+</script>
+</body>
+</html>
